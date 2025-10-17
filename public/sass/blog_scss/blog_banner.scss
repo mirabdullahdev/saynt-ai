@@ -1,0 +1,726 @@
+@use "../base/variable.scss";
+@use "../base/mixins.scss";
+
+
+.blog_banner_section{
+    margin-top: 162px;
+    padding-top: 90px;
+    height: calc(100dvh - 162px);
+    align-content: center;
+    .parent_area{
+        .left_area{
+            .upper_area{
+                display: flex;
+                justify-content: space-between;
+                h3{
+                    width: 50%;
+                    font-size: 100px;
+                    font-weight: 500;
+                    color: transparent;
+                    background: linear-gradient(126.57deg, #FFFFFF, #00E0E0, #FFFFFF);
+                    background-size: 300% 300%; 
+                    background-clip: text;
+                    -webkit-background-clip: text; 
+                    animation: gradient-move 3s infinite linear; 
+                }
+                .btn_content_area{
+                    height: fit-content;
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding: 20px 40px;
+                    width: fit-content;
+                    border: 0.62px solid #FFFFFF4A;
+                    border-radius: 10px;
+                    i{
+                        font-size: 30px;
+                        color: variable.$white;
+                    }
+                    .txt_heading_area{
+                        .heading{
+                            font-size: 19.85px;
+                            font-weight: 700;
+                            color: variable.$white;
+                        }
+                        .text{
+                            font-size: 13.6px;
+                            font-weight: 400;
+                            color: variable.$white;
+                        }
+                    }
+                }
+            }
+            .middle_area{
+                padding-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                p{
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: variable.$white;
+                    width: 40%;
+                }
+                .sign_up_area{
+                    position: relative;
+                    top: 0;
+                    margin-top: -15%;
+                    display: flex;
+                    gap: 100px;
+                    align-items: center;
+                    display: none;
+                    .lines_img{
+                        position: absolute;
+                        right: 30px;
+                        top: 38px;
+                        width: 165px;
+                        img{
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .title{
+                        font-size: 18.78px;
+                        font-weight: 600;
+                        color: variable.$white;
+                    }
+                    .circles{
+                        .circle{
+                            border-radius: 50%;
+                            &.circle1{
+                                height: 65px;
+                                width: 65px;
+                                background: #FFFFFF78;
+                                position: relative;
+                                .circle2{
+                                    height: 43px;
+                                    width: 43px;
+                                    background: #FFFFFF4D;
+                                    position: absolute;
+                                    inset: 0;
+                                    margin: auto;
+                                    .circle3{
+                                        height: 20px;
+                                        width: 20px;
+                                        background: variable.$white;
+                                        position: absolute;
+                                        inset: 0;
+                                        margin: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .lower_area{
+                padding-top: 60px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .button_area{
+                    flex-shrink: 0;
+                    .btn-black{
+                        background-color: variable.$secondary_color !important;
+                        border:  1px solid #FFFFFF4A;
+                    }
+                }
+                form{
+                    .form_group{
+                        position: relative;
+                        width: 400px;
+                        max-width: 100%;
+                        .form-control{
+                            background: transparent;
+                            border:  1px solid #FFFFFF4A;
+                            padding: 14px 24px;
+                            color: variable.$white;
+                            font-weight: 400;
+                            font-size: 14px;
+                            padding-right: 150px;
+                            border-radius: 60px;
+                            &::placeholder{
+                                font-size: inherit;
+                                color: inherit
+                            }
+                        }
+                        .button_area{
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            .btn-green{
+                                background-color: variable.$dark_primary2;
+                                &:hover{
+                                    background-color: variable.$primary_color;
+                                }
+                            }
+                        }
+                    }
+                }
+                .line{
+                    width: 52px;
+                    height: 2px;
+                    background-color: variable.$white;
+                }
+                .text{
+                    font-size: 13.6px;
+                    font-weight: 500;
+                    color: variable.$text_opacity;
+                    width: 30%;
+                }
+            }
+        }
+        .right_area{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-left: 80px;
+            display: none;
+            .box1{
+                margin-top: 80px;
+                padding: 25px 30px;
+                border-radius: 20px;
+                border: 0.76px solid #FFFFFF4A;
+                .heading_icon_area{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    h3{
+                        color: variable.$white;
+                        font-size: 18.89px;
+                        font-weight: 500;
+                    }
+                    a{
+                        color: variable.$white;
+                        font-size: 30px;
+                    }
+
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 300;
+                    color: variable.$white;
+                    padding-top: 10px;
+                }
+                .img_area{
+                    height: 40px;
+                    width: 40px;
+                    background-color: variable.$primary_color;
+                    border-radius: 8px;
+                    margin-left: auto;
+                    background-image: url('../../images//news_icon.png');
+                    background-repeat: no-repeat;
+                    background-size: auto;
+                    background-position: center;
+                }
+            }
+            .box2{
+                padding: 25px 30px;
+                border-radius: 20px;
+                border: 0.76px solid #FFFFFF4A;
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                display: none;
+                .image_area{
+                    flex-shrink: 0;
+                    width: 46px;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .content_area{
+                    
+                    h3{
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: variable.$white;
+                    }
+                    p{
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: variable.$text_opacity;
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 100% 50%; 
+    }
+}
+
+
+
+/* Above 1920 desktop */
+@media (min-width: 1920px){
+    
+}
+
+/* 1680 desktop */
+@media (min-width: 1680px) and (max-width: 1919px){
+    
+}
+
+/* 1600 desktop */
+@media (min-width: 1600px) and (max-width: 1679px){
+    
+}
+
+/* Above 1400 and Below 1599 Desktop*/
+@media (min-width: 1400px) and (max-width: 1599px){
+    .blog_banner_section{
+        padding-top: 70px;
+        margin-top: 132px;
+        .parent_area{
+            .left_area{
+                .upper_area{
+                    h3{
+                        font-size: 75px;
+                        line-height: normal;
+                    } 
+                }
+                .middle_area{
+                    p{
+                        font-size: 16px;
+                    }
+                }
+                .lower_area{
+                    form{
+                        .form_group{
+                            width: 330px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 1300 desktop only */
+@media (min-width: 1300px) and (max-width: 1399px){
+    .blog_banner_section{
+        padding-top: 70px;
+        margin-top: 132px;
+        .parent_area{
+            .left_area{
+                .upper_area{
+                    h3{
+                        font-size: 55px;
+                    } 
+                }
+                .middle_area{
+                    p{
+                        font-size: 16px;
+                    }
+                }
+                .lower_area{
+                    form{
+                        .form_group{
+                            width: 330px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* 1200 desktop only */
+@media (min-width: 1200px) and (max-width: 1299px){
+    .blog_banner_section{
+        padding-top: 70px;
+        margin-top: 132px;
+        .parent_area{
+            .left_area{
+                .upper_area{
+                    h3{
+                        font-size: 55px;
+                    } 
+                }
+                .middle_area{
+                    p{
+                        font-size: 16px;
+                    }
+                }
+                .lower_area{
+                    form{
+                        .form_group{
+                            width: 330px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.blog_banner_section{
+        padding-top: 50px;
+        margin-top: 120px;
+        .parent_area{
+            .left_area{
+                .upper_area{
+                    h3{
+                        font-size: 50px;
+                    } 
+                    .btn_content_area{
+                        margin-right: 30%;
+                        padding: 15px;
+                    }
+                }
+                .middle_area{
+                    p{
+                        font-size: 16px;
+                    }
+                }
+                .lower_area{
+                    form{
+                        flex-grow: 1;
+                        .form_group{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .right_area{
+                padding-left: 0;
+                display: flex;
+                padding-top: 20px;
+                flex-direction: row;
+                gap: 20px;
+                .box1{
+                    margin-top: 0px;
+                    width: 50%;
+                }
+                .box2{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+	.blog_banner_section{
+        padding-top: 40px;
+        margin-top: 120px;
+        .parent_area{
+            .left_area{
+                .upper_area{
+                    h3{
+                        font-size: 40px;
+                    } 
+                    .btn_content_area{
+                        margin-right: 15%;
+                        padding: 15px;
+                    }
+                }
+                .middle_area{
+                    p{
+                        font-size: 16px;
+                    }
+                    .sign_up_area{
+                        margin-top: -6%;
+                        .lines_img{
+                            width: 130px;
+                        }
+                    }
+                }
+                .lower_area{
+                    form{
+                        flex-grow: 1;
+                        .form_group{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .right_area{
+                padding-left: 0;
+                display: flex;
+                padding-top: 20px;
+                flex-direction: row;
+                gap: 20px;
+                .box1{
+                    margin-top: 0px;
+                    width: 50%;
+                }
+                .box2{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+	.blog_banner_section{
+        padding-top: 30px;
+        margin-top: 90px;
+        .parent_area{
+            .left_area{
+                .upper_area{
+                    h3{
+                        font-size: 28px;
+                    } 
+                    .btn_content_area{
+                        margin-right: 15%;
+                        padding: 15px;
+                        .txt_heading_area{
+                            .heading{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .middle_area{
+                    p{
+                        font-size: 14px;
+                    }
+                    .sign_up_area{
+                        margin-top: -0%;
+                        .lines_img{
+                            width: 130px;
+                        }
+                    }
+                }
+                .lower_area{
+                    flex-wrap: wrap;
+                    .button_area{
+                        width: 100%;
+                    }
+                    form{
+                        flex-grow: 1;
+                        .form_group{
+                            width: 100%;
+                            .form-control{
+                                padding: 8px 24px;
+                            }
+                            .button_area{
+                                width: fit-content;
+                            }
+                        }
+                    }
+                }
+            }
+            .right_area{
+                padding-left: 0;
+                display: flex;
+                padding-top: 20px;
+                flex-direction: row;
+                gap: 20px;
+                .box1{
+                    margin-top: 0px;
+                    width: 50%;
+                }
+                .box2{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+	.blog_banner_section{
+        padding-top: 25px;
+        margin-top: 90px;
+        .parent_area{
+            .left_area{
+                .upper_area{
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    h3{
+                        font-size: 25px;
+                        width: 100%;
+                    } 
+                    .btn_content_area{
+                        margin-right:0%;
+                        padding: 15px;
+                        .txt_heading_area{
+                            .heading{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .middle_area{
+                    flex-wrap: wrap;
+                    p{
+                        font-size: 14px;
+                        width: 100%;
+                    }
+                    .sign_up_area{
+                        margin-top: -0%;
+                        .lines_img{
+                            width: 130px;
+                        }
+                    }
+                }
+                .lower_area{
+                    flex-wrap: wrap;
+                    padding-top: 70px;
+                    .text{
+                        width: 100%;
+                    }
+                    .line{
+                        display: none;
+                    }
+                    .button_area{
+                        width: 100%;
+                        order: 1;
+                    }
+                    form{
+                        order: 2;
+                        flex-grow: 1;
+                        .form_group{
+                            width: 100%;
+                            .form-control{
+                                padding: 6px 24px;
+                            }
+                            .button_area{
+                                width: fit-content;
+                            }
+                        }
+                    }
+                }
+            }
+            .right_area{
+                padding-left: 0;
+                display: flex;
+                padding-top: 20px;
+                flex-direction: column;
+                gap: 20px;
+                .box1{
+                    margin-top: 0px;
+                    width: 100%;
+                }
+                .box2{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+	.blog_banner_section{
+        padding-top: 25px;
+        margin-top: 90px;
+        .parent_area{
+            .left_area{
+                .upper_area{
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    h3{
+                        font-size: 25px;
+                        width: 100%;
+                    } 
+                    .btn_content_area{
+                        margin-right:0%;
+                        padding: 15px;
+                        .txt_heading_area{
+                            .heading{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .middle_area{
+                    flex-wrap: wrap;
+                    p{
+                        font-size: 14px;
+                        width: 100%;
+                    }
+                    .sign_up_area{
+                        margin-top: -0%;
+                        .lines_img{
+                            width: 130px;
+                        }
+                    }
+                }
+                .lower_area{
+                    flex-wrap: wrap;
+                    padding-top: 70px;
+                    .text{
+                        width: 100%;
+                    }
+                    .line{
+                        display: none;
+                    }
+                    .button_area{
+                        width: 100%;
+                        order: 1;
+                    }
+                    form{
+                        order: 2;
+                        flex-grow: 1;
+                        .form_group{
+                            width: 100%;
+                            .form-control{
+                                padding: 6px 24px;
+                            }
+                            .button_area{
+                                width: fit-content;
+                            }
+                        }
+                    }
+                }
+            }
+            .right_area{
+                padding-left: 0;
+                display: flex;
+                padding-top: 20px;
+                flex-direction: column;
+                gap: 20px;
+                .box1{
+                    margin-top: 0px;
+                    width: 100%;
+                }
+                .box2{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {
+    
+}
+
+
+
+
+/* Add CSS styles for Portrait orientation */
+@media screen and (orientation: portrait) {
+    
+}
+
+/* Add CSS styles for Landscape orientation */
+@media screen and (orientation: landscape) {
+    
+}

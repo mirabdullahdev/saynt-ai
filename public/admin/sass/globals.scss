@@ -1,0 +1,20 @@
+@use "./base/mixins.scss";
+@use "./base/variable.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: inherit;
+    background-color: #f5f5f5;
+}
+
+.container,
+.row {
+    height: 100%;
+}

@@ -1,0 +1,246 @@
+@use "../base/variable.scss";
+@use "../base/mixins.scss";
+
+
+.coming_soon_section {
+    height: 100vh;
+    align-content: center;
+
+    h3 {
+        text-align: center;
+        color: variable.$primary_color;
+        animation: blink-animation 2.5s infinite;
+    }
+}
+
+@keyframes blink-animation {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+}
+
+.btn-primary {
+    min-width: 133px;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-size: 20px;
+    line-height: 26px;
+    display: block;
+    text-align: center;
+    font-weight: 400;
+}
+
+.btn-green {
+    display: inline-block;
+    background-color: variable.$primary_color;
+    border-radius: 60px;
+    color: variable.$black;
+    font-size: 14px;
+
+    &:hover {
+        background-color: variable.$dark_primary;
+    }
+}
+
+.btn-black {
+    display: inline-block;
+    background-color: variable.$black;
+    border-radius: 600px;
+    color: variable.$white;
+    box-shadow: 0px 0px 1349.46px 0px #05FFEE;
+    font-size: 18px;
+}
+
+.btn-light {
+    display: inline-block;
+    background-color: variable.$white;
+    border-radius: 60px;
+    color: variable.$black;
+    font-size: 14px;
+
+    &:hover {
+        background-color: variable.$text_color;
+    }
+}
+
+.btn-white {
+    background-color: variable.$white;
+    box-shadow: 0px -6px 10px 0px #0000004D inset;
+    font-weight: 400;
+    color: variable.$btn_white_color;
+}
+
+.btn-dark {
+    background-color: variable.$black;
+    font-weight: 600;
+    color: variable.$white;
+    box-shadow: 0px -5px 15px 0px #13145EFA inset, 0px -1px 2px 0px #8FB6FF40;
+}
+
+.gradient {
+    width: min(50%, 232px);
+    aspect-ratio: 1 / 1;
+    filter: blur(200px);
+    background: variable.$gradient;
+    position: absolute;
+    z-index: -1;
+}
+
+.gradient_big {
+    background: conic-gradient(from 177.09deg at 50% 50%, #88A3C7 0deg, #2B6ED1 59.13deg, #062550 246.64deg, #88A3C7 360deg);
+    aspect-ratio: 1/1;
+    width: min(30%, 684px);
+    filter: blur(129.79127502441406px);
+    position: absolute;
+    z-index: -1;
+}
+
+.logo_gradient {
+    width: min(50%, 667px);
+    background: radial-gradient(89.94% 89.94% at 50% 50%, rgba(44, 148, 179, 0.5) 0%, rgba(44, 148, 179, 0) 100%);
+    filter: blur(260px);
+    aspect-ratio: 1/1;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contact_gradient {
+    width: min(30%, 444.82px);
+    aspect-ratio: 1/1;
+    background: #30B0C7;
+    position: absolute;
+    z-index: -1;
+    filter: blur(200px);
+}
+
+.academy_gradient {
+    width: min(40%, 232px);
+    aspect-ratio: 1/2;
+    background: #8951FF;
+    filter: blur(200px);
+    position: absolute;
+    z-index: -1;
+}
+
+/* Extra Huge large desktops */
+@media (min-width: 1920px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* Extra Huge large desktops */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Extra large desktops and mac laptops*/
+@media (min-width: 1400px) and (max-width: 1599px) {}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .btn-primary {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+    .btn-primary {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    .btn-primary {
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .btn-green {
+        border-radius: 60px;
+        font-size: 14px;
+
+    }
+
+    .btn-light {
+        border-radius: 60px;
+        font-size: 14px;
+
+    }
+
+    .btn-black {
+        border-radius: 60px;
+        font-size: 14px;
+    }
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+    .btn-primary {
+        padding: 11px 15px;
+        border-radius: 6px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .btn-green {
+        border-radius: 60px;
+        font-size: 14px;
+
+    }
+
+    .btn-light {
+        border-radius: 60px;
+        font-size: 14px;
+
+    }
+
+    .btn-black {
+        border-radius: 60px;
+        font-size: 14px;
+    }
+
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .btn-primary {
+        padding: 11px 15px;
+        border-radius: 6px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .btn-green {
+        border-radius: 60px;
+        font-size: 14px;
+
+    }
+
+    .btn-light {
+        border-radius: 60px;
+        font-size: 14px;
+    }
+
+    .btn-black {
+        border-radius: 60px;
+        font-size: 14px;
+    }
+
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}

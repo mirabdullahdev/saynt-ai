@@ -1,0 +1,303 @@
+@use "../base/variable.scss";
+@use "../base/mixins.scss";
+
+
+.career_section{
+    background: radial-gradient(48.96% 68.85% at 50% 65.38%, rgba(0, 150, 136, 0.3) 0%, rgba(0, 150, 136, 0.05) 100%);
+    padding: 90px 0;
+    padding-top: 280px;
+    .parent_area{
+        .left_area{
+            h3{
+                font-size: 48px;
+                font-weight: 400;
+                color: variable.$white;
+            }
+            p{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                padding-top: 10px;
+                color: variable.$text_opacity;
+            }
+            form{
+                padding-top: 40px;
+                .form-group{
+                    &.file_area{
+                        position: relative;
+                        &:after{
+                            content: '\F603';
+                            font-family: 'bootstrap-icons';
+                            position: absolute;
+                            top:42px;
+                            right: 22px;
+                            font-size: 20px;
+                            color: variable.$primary_color;
+                        }
+                        .btn-green{
+                            position: absolute;
+                            top: 29px;
+                            left: 0;
+                            border-radius: 15px;
+                            padding: 12px 80px;
+                        }
+                        .border_input{
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: variable.$white;
+                            background: transparent;
+                            padding: 12px 15px;
+                            border-radius: 15px;
+                            border: 1px solid variable.$text_opacity;
+                        }
+                        .file_upload{
+                            position: absolute;
+                            opacity: 0;
+                            top: 29px;
+                        }
+                    }
+                }
+                .button_area{
+                    button{
+                        width: 100%;
+                        border-radius: 10px;
+                        border: 0;
+                        background-color: variable.$dark_primary2;
+                        color: variable.$white;
+                        &:active , &:hover{
+                            background-color: variable.$primary_color;
+                        }
+                    }
+                }
+            }
+        }
+        .right_area{
+            .logo_area{
+                height: auto;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/* Above 1920 desktop */
+@media (min-width: 1920px){
+    
+}
+
+/* 1680 desktop */
+@media (min-width: 1680px) and (max-width: 1919px){
+    
+}
+
+/* 1600 desktop */
+@media (min-width: 1600px) and (max-width: 1679px){
+    
+}
+
+/* Above 1400 and Below 1599 Desktop*/
+@media (min-width: 1400px) and (max-width: 1599px){
+    
+}
+
+/* 1300 desktop only */
+@media (min-width: 1300px) and (max-width: 1399px){
+    .career_section{
+        padding-top: 180px;
+        padding-bottom: 90px;
+    }
+}
+
+/* 1200 desktop only */
+@media (min-width: 1200px) and (max-width: 1299px){
+    .career_section{
+        padding-top: 180px;
+        padding-bottom: 90px;
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.career_section{
+        padding-top: 140px;
+        padding-bottom: 50px;
+        .parent_area{
+            .left_area{
+                h3{
+                    font-size: 35px;
+                } 
+                form{
+                    .form-group{
+                        &.file_area{
+                            .btn-green{
+                                padding: 12px 60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+	.career_section{
+        padding-top: 140px;
+        padding-bottom: 40px;
+        .parent_area{
+            .left_area{
+                h3{
+                    font-size: 30px;
+                } 
+                form{
+                    padding-top: 30px;
+                    .form-group{
+                        &.file_area{
+                            .btn-green{
+                                padding: 12px 60px;
+                            }
+                        }
+                    }
+                }
+            }
+            .right_area{
+                display: none;
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+	.career_section{
+        padding-top: 100px;
+        padding-bottom: 30px;
+        .parent_area{
+            .left_area{
+                h3{
+                    font-size: 25px;
+                } 
+                p{
+                    font-size: 14px;
+                }
+                form{
+                    padding-top: 20px;
+                    .button_area{
+                        button{
+                            padding: 12px 15px;
+                        }
+                    }
+                    .form-group{
+                        &.file_area{
+                            .btn-green{
+                                padding: 15px 60px;
+                            }
+                        }
+                    }
+                }
+            }
+            .right_area{
+                display: none;
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+	.career_section{
+        padding-top: 100px;
+        padding-bottom: 30px;
+        .parent_area{
+            .left_area{
+                h3{
+                    font-size: 25px;
+                } 
+                p{
+                    font-size: 14px;
+                }
+                form{
+                    padding-top: 20px;
+                    .button_area{
+                        button{
+                            padding: 12px 15px;
+                        }
+                    }
+                    .form-group{
+                        &.file_area{
+                            .btn-green{
+                                padding: 15px 60px;
+                            }
+                        }
+                    }
+                }
+            }
+            .right_area{
+                display: none;
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+	.career_section{
+        padding-top: 100px;
+        padding-bottom: 30px;
+        .parent_area{
+            .left_area{
+                h3{
+                    font-size: 25px;
+                } 
+                p{
+                    font-size: 14px;
+                }
+                form{
+                    padding-top: 20px;
+                    .form-group{
+                        &.file_area{
+                            .btn-green{
+                                padding: 15px 60px;
+                            }
+                        }
+                    }
+                    .button_area{
+                        button{
+                            padding: 12px 15px;
+                        }
+                    }
+                }
+            }
+            .right_area{
+                display: none;
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {
+    
+}
+
+
+
+
+/* Add CSS styles for Portrait orientation */
+@media screen and (orientation: portrait) {
+    
+}
+
+/* Add CSS styles for Landscape orientation */
+@media screen and (orientation: landscape) {
+    
+}

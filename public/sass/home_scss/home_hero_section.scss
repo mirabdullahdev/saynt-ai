@@ -1,0 +1,679 @@
+@use "../base/variable.scss";
+@use "../base/mixins.scss";
+
+
+
+.home_hero_section {
+    padding-top: 90px;
+    margin-top: 162px;
+    overflow-x: clip;
+    height: calc(100dvh - 162px);
+
+    .parent_area {
+        .left_area {
+            h3 {
+                font-size: 90px;
+                font-weight: 500;
+                color: transparent;
+                background: linear-gradient(126.57deg, #FFFFFF, #00E0E0, #FFFFFF);
+                // background-size: 300% 300%;
+                background-clip: text;
+                -webkit-background-clip: text;
+                // animation: gradient-move 3s infinite linear;
+            }
+
+            .desc {
+                font-weight: 400;
+                color: variable.$primary_color;
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                color: variable.$white;
+                padding-top: 10px;
+            }
+
+            .buttons_area {
+                padding-top: 20px;
+                display: flex;
+                gap: 20px;
+            }
+        }
+
+        .right_area {
+            padding-right: 50px;
+            position: relative;
+
+            .outer_circle {
+                border: 1.5px solid variable.$border_color4;
+                width: 400px;
+                margin-left: auto;
+                border-radius: 50%;
+                padding: 40px;
+                position: relative;
+
+                .rotate_img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform-origin: center;
+                    transform: translate(-50%, -50%);
+                    width: 85%;
+                    height: 85%;
+
+                    &.first {
+                        animation: rotate1 50s linear infinite;
+
+                        img {
+                            animation: rotate3 50s linear infinite;
+                        }
+                    }
+
+                    &.layer {
+                        animation: rotate 50s linear infinite;
+
+                        img {
+                            animation: rotate2 50s linear infinite;
+                        }
+                    }
+
+                    img {
+                        width: fit-content;
+                        height: fit-content;
+                        object-fit: contain;
+                    }
+                }
+
+                .dotted {
+                    width: 100%;
+                    position: relative;
+                    height: auto;
+                    padding: 20px;
+                    border-radius: 50%;
+                    animation: rotate4 50s linear infinite;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                    .logo_area {
+                        animation: rotate5 50s linear infinite;
+                        height: 70%;
+                        width: 70%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+
+            .logo_grd {
+                position: absolute;
+                filter: blur(200px);
+                background: linear-gradient(204.29deg, #ECECEC 85.04%, #080808 85.04%);
+                width: min(30%, 600px);
+                aspect-ratio: 2/1;
+                bottom: 0;
+                left: 200px;
+            }
+        }
+    }
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+
+    }
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: translate(-50%, -50%) rotate(-180deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(180deg);
+
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: translateX(100%) rotate(70deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(70deg);
+
+    }
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+
+    }
+}
+
+@keyframes rotate4 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotate5 {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: 100% center;
+    }
+}
+
+.home_service_banner_section {
+    margin-top: 90px;
+    background-color: variable.$primary_color;
+    padding: 40px 0;
+
+    &.book_call_section {
+        position: relative;
+        z-index: 2;
+        background-color: unset;
+
+        &::after {
+            z-index: -1;
+            content: '';
+            animation: moveBackground 30s linear infinite;
+            position: absolute;
+            inset: 0;
+            background: url('../../images/book_call_bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        .parent_area {
+            text-align: center;
+        }
+    }
+
+    .parent_area {
+        h3 {
+            font-size: 49.2px;
+            font-weight: 500;
+            text-align: center;
+            color: transparent;
+            background: linear-gradient(90.22deg, #000000 0.19%, #666666 99.87%);
+            background-size: 300% 300%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: gradient-move 3s infinite linear;
+        }
+    }
+}
+
+
+/* Above 1920 desktop */
+@media (min-width: 1920px) {}
+
+/* 1680 desktop */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* 1600 desktop */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Above 1400 and Below 1599 Desktop*/
+@media (min-width: 1400px) and (max-width: 1599px) {
+
+    .home_hero_section {
+        margin-top: 132px;
+        padding-top: 70px;
+        height: calc(100dvh - 132px);
+
+        .parent_area {
+            .left_area {
+                h3 {
+                    font-size: 80px;
+                }
+            }
+        }
+
+        // .parent_area{
+        //     .right_area{
+        //         .logo_area{
+        //             height: 200px;
+        //         } 
+        //     }
+        // }
+    }
+}
+
+/* 1300 desktop only */
+@media (min-width: 1300px) and (max-width: 1399px) {
+    .home_hero_section {
+        margin-top: 132px;
+        padding-top: 70px;
+        height: calc(100dvh - 132px);
+        // .parent_area{
+        //     .right_area{
+        //         .logo_area{
+        //             height: 200px;
+        //         } 
+        //     }
+        // }
+    }
+
+    .home_service_banner_section {
+        margin-top: 70px;
+    }
+}
+
+/* 1200 desktop only */
+@media (min-width: 1200px) and (max-width: 1299px) {
+    .home_hero_section {
+        height: calc(100dvh - 132px);
+        margin-top: 132px;
+        padding-top: 70px;
+        // .parent_area{
+        //     .right_area{
+        //         .logo_area{
+        //             height: 200px;
+        //         } 
+        //     }
+        // }
+    }
+
+    .home_service_banner_section {
+        margin-top: 70px;
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .home_hero_section {
+        margin-top: 120px;
+        padding-top: 50px;
+        height: calc(100dvh - 120px);
+
+        .parent_area {
+            .left_area {
+                h3 {
+                    font-size: 70px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            // .right_area{
+            //     .circles_img{
+            //         width: 340px;
+            //     }
+            //     .logo_area{
+            //         height: 150px;
+            //     } 
+            // }
+        }
+    }
+
+    .home_service_banner_section {
+        margin-top: 50px;
+
+        .parent_area {
+            h3 {
+                font-size: 40px;
+            }
+        }
+    }
+
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+    .home_hero_section {
+        margin-top: 120px;
+        padding-top: 40px;
+        height: calc(100dvh - 120px);
+        align-content: center;
+
+        .parent_area {
+            .left_area {
+                p {
+                    font-size: 16px;
+                }
+
+                h3 {
+                    font-size: 50px;
+                }
+
+                .desc {
+                    font-size: 26px;
+                }
+
+                .buttons_area {
+                    flex-direction: column;
+
+                    a {
+                        width: fit-content;
+                    }
+                }
+            }
+
+            .right_area {
+                padding: 0;
+
+                .outer_circle {
+                    width: 340px;
+                    padding: 15px;
+                    margin: 0;
+
+                    .rotate_img {
+                        width: 87%;
+                        height: 87%;
+                    }
+
+                    .dotted {
+                        padding: 30px;
+
+                        .logo_area {
+                            width: 60%;
+                            height: 60%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .home_service_banner_section {
+        margin-top: 40px;
+        padding: 30px 0;
+
+        .parent_area {
+            h3 {
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    .home_hero_section {
+        margin-top: 90px;
+        padding-top: 30px;
+        height: 100%;
+
+        .parent_area {
+            .left_area {
+                h3 {
+                    width: 100%;
+                    font-size: 35px;
+                }
+
+                .desc {
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+
+                .buttons_area {
+                    flex-direction: column;
+
+                    a {
+                        width: fit-content;
+                    }
+                }
+            }
+
+            .right_area {
+                padding: 0;
+
+                .outer_circle {
+                    width: 300px;
+                    padding: 15px;
+                    margin: 0;
+
+                    .rotate_img {
+                        width: 90%;
+                        height: 90%;
+                    }
+
+                    .dotted {
+                        padding: 30px;
+
+                        .logo_area {
+                            width: 60%;
+                            height: 60%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .home_service_banner_section {
+        margin-top: 30px;
+        padding: 25px 0;
+
+        .parent_area {
+            h3 {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+    .home_hero_section {
+        margin-top: 90px;
+        padding-top: 25px;
+        height: 100%;
+
+        .parent_area {
+            .left_area {
+                padding-bottom: 20px;
+
+                h3 {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 30px;
+                }
+
+                .desc {
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 14px;
+                    text-align: center;
+                }
+
+                .buttons_area {
+                    justify-content: center;
+
+                    a {
+                        width: fit-content;
+                    }
+                }
+            }
+
+            .right_area {
+                padding: 0;
+                padding-top: 15px;
+
+                .outer_circle {
+                    width: 270px;
+                    padding: 15px;
+                    margin: 0;
+                    margin-inline: auto;
+
+                    .rotate_img {
+                        width: 90%;
+                        height: 90%;
+                    }
+
+                    .dotted {
+                        padding: 25px;
+
+                        .logo_area {
+                            width: 60%;
+                            height: 60%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .home_service_banner_section {
+        margin-top: 25px;
+        padding: 20px 0;
+
+        .parent_area {
+            h3 {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .home_hero_section {
+        margin-top: 90px;
+        padding-top: 25px;
+        height: 100%;
+
+        .parent_area {
+            .left_area {
+                padding-bottom: 20px;
+
+                h3 {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 30px;
+                }
+
+                .desc {
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 14px;
+                    text-align: center;
+                }
+
+                .buttons_area {
+                    justify-content: center;
+
+                    a {
+                        width: fit-content;
+                    }
+                }
+            }
+
+            .right_area {
+                padding: 0;
+                padding-top: 15px;
+
+                .outer_circle {
+                    width: 270px;
+                    padding: 15px;
+                    margin: 0;
+                    margin-inline: auto;
+
+                    .rotate_img {
+                        width: 90%;
+                        height: 90%;
+                    }
+
+                    .dotted {
+                        padding: 25px;
+
+                        .logo_area {
+                            width: 60%;
+                            height: 60%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .home_service_banner_section {
+        margin-top: 25px;
+        padding: 20px 0;
+
+        .parent_area {
+            h3 {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}
+
+
+
+
+/* Add CSS styles for Portrait orientation */
+@media screen and (orientation: portrait) {}
+
+/* Add CSS styles for Landscape orientation */
+@media screen and (orientation: landscape) {}

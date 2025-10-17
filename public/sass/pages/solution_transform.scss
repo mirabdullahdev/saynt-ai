@@ -1,0 +1,471 @@
+@use "../base/variable.scss";
+@use "../base/mixins.scss";
+
+.transform_solution_section{
+    padding-top: 90px;
+    .parent_area{
+        .left_area{
+            height: 100%;
+            background: linear-gradient(306.77deg, #060B21 75.7%, #0E142F 97.33%);
+            padding: 60px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            .shape_img1{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 72px;
+                margin-top: 8%;
+                margin-right: 8%;
+                z-index: -1;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .shape_img2{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 133px;
+                margin-top: 20%;
+                margin-right: -8%;
+                z-index: -1;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .ui_img{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin-bottom: -10%;
+                margin-right: 10%;
+                z-index: -1;
+                width: 412px;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .web_img{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                margin-bottom: 5%;
+                margin-left: 5%;
+                z-index: -1;
+                width: 180px;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                inset: 0;
+                z-index: -2;
+                background: url('../../../public/images/card_corner_shape.png') no-repeat center / 100% 100%;
+            }
+            .content_area{
+                width: 342px;
+                max-width: 100%;
+                h3{
+                    font-size: 38px;
+                    font-weight: 500;
+                    color: variable.$white;
+                }
+                p{
+                    padding-top: 20px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: variable.$text_opacity;
+                }
+                .button_area{
+                    padding-top: 40px;
+                    .btn-primary{
+                        display: inline-block;
+                        // box-shadow: -0.96px -6.69px 16.25px 0px #000000 inset;
+                        // font-weight: 600;
+                    }
+                }
+            }
+        }
+        .right_area{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            .content_area{
+                background: linear-gradient(306.77deg, #060B21 75.7%, #0E142F 97.33%);
+                padding: 54px 25px;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                gap: 60px;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                .bg_img{
+                    position: absolute;
+                    inset: 0;
+                    z-index: -1;
+                    @include mixins.transition(all 0.3s ease);
+                    opacity: 0;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        background-color: variable.$secondary_color;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0.6;
+                    }
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                &:hover{
+                    .bg_img{
+                        opacity: 1;
+                    }
+                    p{
+                        color: variable.$primary_color;
+                    }
+                }
+                h3{
+                    font-size: 24.85px;
+                    font-weight: 600;
+                    color: variable.$white;
+                    flex-shrink: 0;
+                    width: 150px;
+                }
+                p{
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 21.41px;
+                    color: variable.$white;
+                    @include mixins.transition(all 0.3s ease);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/* Above 1920 desktop */
+@media (min-width: 1920px){
+    
+}
+
+/* 1680 desktop */
+@media (min-width: 1680px) and (max-width: 1919px){
+    
+}
+
+/* 1600 desktop */
+@media (min-width: 1600px) and (max-width: 1679px){
+    
+}
+
+/* Above 1400 and Below 1599 Desktop*/
+@media (min-width: 1400px) and (max-width: 1599px){
+    
+}
+
+/* 1300 desktop only */
+@media (min-width: 1300px) and (max-width: 1399px){
+    .transform_solution_section{
+        padding-top: 70px;
+        .parent_area{
+            .left_area{
+                .content_area {
+                    h3{
+                        font-size: 35px;
+                    } 
+                }
+            }
+        }
+    }
+
+}
+
+/* 1200 desktop only */
+@media (min-width: 1200px) and (max-width: 1299px){
+    .transform_solution_section{
+        padding-top: 70px;
+        .parent_area{
+            .left_area{
+                .content_area {
+                    h3{
+                        font-size: 35px;
+                    } 
+                }
+            }
+        }
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.transform_solution_section{
+        padding-top: 50px;
+        .parent_area{
+            .left_area{
+                padding: 45px;
+                .shape_img2{
+                    margin-top: 50%;
+                }
+                .ui_img{
+                    width: 350px;
+                }
+                .content_area {
+                    border-radius: 15px;
+                    h3{
+                        font-size: 30px;
+                    } 
+                }
+            }
+            .right_area{
+                .content_area{
+                    padding: 30px 20px;
+                    gap: 30px;
+                    border-radius: 15px;
+                    h3{
+                        font-size: 20px;
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+	.transform_solution_section{
+        padding-top: 40px;
+        .parent_area{
+            .left_area{
+                padding: 45px;
+                .shape_img2{
+                    margin-top: 20%;
+                }
+                .ui_img{
+                    width: 300px;
+                }
+                .content_area {
+                    border-radius: 15px;
+                    h3{
+                        font-size: 30px;
+                    } 
+                }
+            }
+            .right_area{
+                padding-top: 25px;
+                .content_area{
+                    padding: 30px 20px;
+                    gap: 25px;
+                    border-radius: 15px;
+                    h3{
+                        font-size: 20px;
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+	.transform_solution_section{
+        padding-top: 30px;
+        .parent_area{
+            .left_area{
+                padding: 30px;
+                height: 300px;
+                max-height: 100%;
+                .shape_img1{
+                    margin-top: 2%;
+                    width: 60px;
+                }
+                .shape_img2{
+                    margin-top: 15%;
+                    width: 100px;
+                }
+                .ui_img{
+                    width: 250px;
+                }
+                .content_area {
+                    border-radius: 15px;
+                    h3{
+                        font-size: 25px;
+                    } 
+                    .button_area{
+                        padding-top: 20px;
+                    }
+                }
+            }
+            .right_area{
+                padding-top: 25px;
+                .content_area{
+                    padding: 30px 20px;
+                    gap: 25px;
+                    border-radius: 15px;
+                    h3{
+                        font-size: 20px;
+                        width: 120px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+	.transform_solution_section{
+        padding-top: 25px;
+        .parent_area{
+            .left_area{
+                padding: 30px 20px;
+                height: 300px;
+                max-height: 100%;
+                border-radius: 10px;
+                .shape_img1{
+                    margin-top: 2%;
+                    width: 60px;
+                }
+                .shape_img2{
+                    margin-top: 15%;
+                    width: 100px;
+                }
+                .ui_img{
+                    width: 200px;
+                }
+                .web_img{
+                    width: 95px;
+                }
+                .content_area {
+                    border-radius: 10px;
+                    h3{
+                        font-size: 22px;
+                    } 
+                    .button_area{
+                        padding-top: 20px;
+                    }
+                }
+            }
+            .right_area{
+                padding-top: 20px;
+                gap: 20px;
+                .content_area{
+                    padding: 20px 20px;
+                    gap: 10px;
+                    border-radius: 15px;
+                    flex-wrap: wrap;
+                    h3{
+                        font-size: 20px;
+                        width: 100%;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+	.transform_solution_section{
+        padding-top: 25px;
+        .parent_area{
+            .left_area{
+                padding: 30px 20px;
+                height: 300px;
+                max-height: 100%;
+                border-radius: 10px;
+                .shape_img1{
+                    margin-top: 2%;
+                    width: 60px;
+                }
+                .shape_img2{
+                    margin-top: 15%;
+                    width: 100px;
+                }
+                .ui_img{
+                    width: 200px;
+                }
+                .web_img{
+                    width: 95px;
+                }
+                .content_area {
+                    border-radius: 10px;
+                    h3{
+                        font-size: 22px;
+                    } 
+                    p{
+                        padding-top: 10px;
+                    }
+                    .button_area{
+                        padding-top: 20px;
+                    }
+                }
+            }
+            .right_area{
+                padding-top: 20px;
+                gap: 20px;
+                .content_area{
+                    padding: 20px 20px;
+                    gap: 10px;
+                    border-radius: 10px;
+                    flex-wrap: wrap;
+                    h3{
+                        font-size: 20px;
+                        width: 100%;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {
+    
+}
+
+
+
+
+/* Add CSS styles for Portrait orientation */
+@media screen and (orientation: portrait) {
+    
+}
+
+/* Add CSS styles for Landscape orientation */
+@media screen and (orientation: landscape) {
+    
+}

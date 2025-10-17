@@ -1,0 +1,277 @@
+@use "../base/variable.scss";
+@use "../base/mixins.scss";
+
+
+.home_startup_section {
+    margin-top: 90px;
+
+    .parent_area {
+        .wide_card {
+            padding: 60px 74px;
+            background-color: variable.$wide_card_bg;
+            border-radius: 32px;
+            margin-bottom: 50px;
+            background-image: url('../../images/round_bg.png');
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: all 0.3s ease;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &.right_side{
+                background-image: url('../../images/round_bg2.png');
+                background-position: right center;
+                .left{
+                    margin-left: auto;
+                }
+                .right{
+                    margin-right: auto;
+                    margin-left: unset;
+                }
+            }
+         
+            .left {
+                width: 393px;
+                max-width: 100%;
+
+                h3 {
+                    font-weight: 300;
+                    font-size: 40px;
+                    line-height: 49.68px;
+                    color: variable.$primary_color;
+
+                    span {
+                        color: variable.$white;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .right {
+                width: 483px;
+                max-width: 100%;
+                margin-left: auto;
+
+                p {
+                    font-weight: 300;
+                    font-size: 28px;
+                    line-height: 34px;
+                    letter-spacing: 0.4px;
+                    color: variable.$white;
+                    strong{
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/* Above 1920 desktop */
+@media (min-width: 1920px) {}
+
+/* 1680 desktop */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* 1600 desktop */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Above 1400 and Below 1599 Desktop*/
+@media (min-width: 1400px) and (max-width: 1599px) {
+    .home_startup_section{
+        .parent_area{
+            .wide_card{
+                .left{
+                    h3{
+                        font-size: 35px;
+                        line-height: 40.68px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 1300 desktop only */
+@media (min-width: 1300px) and (max-width: 1399px) {
+    .home_startup_section{
+        margin-top: 70px;
+        .parent_area{
+            .wide_card{
+                .left{
+                    h3{
+                        font-size: 35px;
+                        line-height: 40.68px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 1200 desktop only */
+@media (min-width: 1200px) and (max-width: 1299px) {
+    .home_startup_section{
+        margin-top: 70px;
+        .parent_area{
+            .wide_card{
+                .left{
+                    h3{
+                        font-size: 35px;
+                        line-height: 40.68px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .home_startup_section{
+        margin-top: 50px;
+        .parent_area{
+            .wide_card{
+                padding: 60px 54px;
+                border-radius: 16px;
+                margin-bottom: 50px;
+                .left{
+                    h3{
+                        font-size: 30px;
+                        line-height: 35px;
+                    }
+                }
+                .right{
+                    p{
+                        font-size: 22px;
+                        line-height: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+    .home_startup_section{
+        margin-top: 40px;
+        .parent_area{
+            .wide_card{
+                padding: 50px;
+                border-radius: 14px;
+                margin-bottom: 40px;
+                .left{
+                    h3{
+                        font-size: 26px;
+                        line-height: 32px;
+                    }
+                }
+                .right{
+                    p{
+                        font-size: 20px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    .home_startup_section{
+        margin-top: 30px;
+        .parent_area{
+            .wide_card{
+                padding: 30px;
+                border-radius: 14px;
+                margin-bottom: 30px;
+                .left{
+                    h3{
+                        font-size: 22px;
+                        line-height: 30px;
+                    }
+                }
+                .right{
+                    p{
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+    .home_startup_section{
+        margin-top: 25px;
+        .parent_area{
+            .wide_card{
+                padding: 25px;
+                border-radius: 10px;
+                margin-bottom: 25px;
+                background-size: cover;
+                .left{
+                    h3{
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                }
+                .right{
+                    p{
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .home_startup_section{
+        margin-top: 25px;
+        .parent_area{
+            .wide_card{
+                padding: 25px;
+                border-radius: 10px;
+                margin-bottom: 25px;
+                background-size: cover;
+                .left{
+                    h3{
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                }
+                .right{
+                    p{
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}
+
+
+
+
+/* Add CSS styles for Portrait orientation */
+@media screen and (orientation: portrait) {}
+
+/* Add CSS styles for Landscape orientation */
+@media screen and (orientation: landscape) {}

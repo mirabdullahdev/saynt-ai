@@ -1,0 +1,934 @@
+@use "../base/variable.scss";
+@use "../base/mixins.scss";
+
+
+
+.contact_expertise_section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    position: relative;
+
+    .parent_area {
+        h3 {
+            font-family: Poppins;
+            font-size: 54.37px;
+            font-weight: 250;
+            color: variable.$white;
+
+            span {
+                color: variable.$primary_color;
+                font-weight: 400;
+            }
+        }
+
+        .slider_area {
+            padding-top: 90px;
+
+            .swiper {
+                overflow-y: visible;
+                overflow-x: clip;
+
+                .swiper-slide {
+                    @include mixins.transition(all 400ms ease);
+                }
+            }
+
+            .swiper-slide-active {
+                transform: scale(1.2);
+                z-index: 2;
+
+                .slide_inner {
+                    @include mixins.transition(all 400ms ease);
+                    background-color: variable.$blue;
+
+                    .logo_area {
+                        display: block;
+                    }
+
+                    h3 {
+                        color: variable.$black;
+                    }
+
+                    p {
+                        color: variable.$black;
+                    }
+
+                    a {
+                        background-color: variable.$white;
+                        color: variable.$black;
+                        box-shadow: none;
+
+                        i {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+
+            .slide_inner {
+                background: linear-gradient(274.2deg, rgba(247, 247, 247, 0.1) -0.59%, rgba(79, 79, 79, 0.1) 100%);
+                padding: 70px 55px;
+                border-radius: 20px;
+                border: 1.5px solid variable.$primary_color;
+
+                .logo_area {
+                    height: 44px;
+                    width: 44px;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    display: none;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                h3 {
+                    padding-top: 25px;
+                    font-size: 27.19px;
+                    font-weight: 600;
+                    text-align: center;
+                    color: variable.$primary_color;
+                }
+
+                p {
+                    font-size: 18.13px;
+                    font-weight: 300;
+                    text-align: center;
+                    color: variable.$white;
+                    padding-top: 10px;
+                }
+
+                a {
+                    font-size: 15.1px;
+                    font-weight: 300;
+                    text-align: center;
+                    color: variable.$black;
+                    display: block;
+                    margin-top: 40px;
+                    width: fit-content;
+                    margin-inline: auto;
+                    box-shadow: 0px 0px 17.43px 0px #00FFD2;
+
+
+                    i {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact_gradient {
+        left: -150px;
+        bottom: 0;
+        filter: blur(300px);
+        width: min(20%, 444.82px);
+
+    }
+}
+
+
+.contact_deliver_section {
+    padding-top: 90px;
+
+    .parent_area {
+        .upper_area {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h3 {
+                width: 217px;
+                max-width: 100%;
+                font-family: Poppins;
+                font-size: 54.37px;
+                font-weight: 250;
+                color: variable.$white;
+
+                span {
+                    color: variable.$primary_color;
+                    font-weight: 400;
+                }
+            }
+
+            p {
+                font-size: 18.13px;
+                font-weight: 300;
+                color: variable.$white;
+                width: 625px;
+                max-width: 100%;
+            }
+        }
+
+        .cards_area {
+            display: flex;
+            gap: 60px;
+            padding-top: 60px;
+            flex-wrap: wrap;
+
+            .card_inner {
+                width: calc((100% - 180px) / 4);
+                position: relative;
+
+                &:last-child {
+                    &:before {
+                        content: none;
+                    }
+                }
+
+                &:before {
+                    content: '';
+                    height: 2px;
+                    width: 75%;
+                    background-color: variable.$white;
+                    top: 10px;
+                    right: -45%;
+                    position: absolute;
+                }
+
+                .circle {
+                    height: 22px;
+                    width: 22px;
+                    border-radius: 50%;
+                    background-color: variable.$white;
+                    margin: 0 auto;
+                    border: 2px solid variable.$blue;
+
+                    &.active {
+                        position: relative;
+
+                        &:after {
+                            content: '';
+                            height: 40px;
+                            width: 40px;
+                            display: inline-block;
+                            border-radius: 50%;
+                            border: 2px dashed variable.$white;
+                            position: absolute;
+                            top: 0;
+                            left: -11px;
+                            bottom: 0;
+                            margin: auto;
+                        }
+                    }
+                }
+
+                h4 {
+                    padding-top: 20px;
+                    font-size: 20.02px;
+                    font-weight: 500;
+                    text-align: center;
+                    color: variable.$primary_color;
+                }
+
+                P {
+                    font-size: 20.02px;
+                    font-weight: 400;
+                    text-align: center;
+                    color: variable.$white;
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+.contact_faq_section {
+    padding-top: 90px;
+
+    .parent_area {
+        h3 {
+            font-size: 54.37px;
+            font-weight: 250;
+            color: variable.$white;
+
+            span {
+                color: variable.$primary_color;
+                font-weight: 400;
+            }
+        }
+
+        .accordion_area {
+            padding-top: 40px;
+            padding-left: 80px;
+            padding-right: 80px;
+
+            .accordion {
+                .accordion-item {
+                    margin-top: 20px;
+                    background: linear-gradient(274.2deg, rgba(247, 247, 247, 0.1) -0.59%, rgba(79, 79, 79, 0.1) 100%);
+                    border: 1px solid variable.$blue;
+                    border-radius: 15px;
+
+                    .accordion-header {
+                        .accordion-button {
+                            padding: 25px 30px;
+                            background: transparent;
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: variable.$white;
+                            box-shadow: none;
+
+                            &::after {
+                                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff' stroke='%23052c65' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 5L8 11L14 5'/%3E%3C/svg%3E");
+                            }
+
+                            &:focus {
+                                box-shadow: none;
+                            }
+                        }
+                    }
+
+                    .accordion-body {
+                        font-size: 16px;
+                        font-weight: 300;
+                        color: variable.$white;
+                        padding: 25px 30px;
+                        padding-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Above 1920 desktop */
+@media (min-width: 1920px) {}
+
+/* 1680 desktop */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* 1600 desktop */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Above 1400 and Below 1599 Desktop*/
+@media (min-width: 1400px) and (max-width: 1599px) {}
+
+/* 1300 desktop only */
+@media (min-width: 1300px) and (max-width: 1399px) {
+    .contact_expertise_section {
+        padding-top: 70px;
+
+        .parent_area {
+            .slider_area {
+                .slide_inner {
+                    padding: 55px 55px;
+                }
+            }
+        }
+    }
+
+    .contact_deliver_section {
+        padding-top: 70px;
+
+        .parent_area {
+            .upper_area {
+                h3 {
+                    font-size: 45px;
+                }
+            }
+
+            .cards_area {
+                gap: 40px;
+
+                .card_inner {
+                    width: calc((100% - 120px)/4);
+                }
+            }
+        }
+    }
+
+    .contact_faq_section {
+        padding-top: 70px;
+
+        .parent_area {
+            h3 {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+/* 1200 desktop only */
+@media (min-width: 1200px) and (max-width: 1299px) {
+    .contact_expertise_section {
+        padding-top: 70px;
+
+        .parent_area {
+            .slider_area {
+                .slide_inner {
+                    padding: 55px 55px;
+                }
+            }
+        }
+    }
+
+    .contact_deliver_section {
+        padding-top: 70px;
+
+        .parent_area {
+            .upper_area {
+                h3 {
+                    font-size: 45px;
+                }
+            }
+
+            .cards_area {
+                gap: 40px;
+
+                .card_inner {
+                    width: calc((100% - 120px)/4);
+                }
+            }
+        }
+    }
+
+    .contact_faq_section {
+        padding-top: 70px;
+
+        .parent_area {
+            h3 {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .contact_expertise_section {
+        padding-top: 50px;
+
+        .parent_area {
+            h3 {
+                font-size: 45px;
+            }
+
+            .slider_area {
+                .slide_inner {
+                    padding: 40px 40px;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    a {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact_deliver_section {
+        padding-top: 50px;
+
+        .parent_area {
+            .upper_area {
+                h3 {
+                    font-size: 45px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .cards_area {
+                gap: 40px;
+
+                .card_inner {
+                    width: calc((100% - 120px)/4);
+
+                    h4 {
+                        font-size: 16px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact_faq_section {
+        padding-top: 50px;
+
+        .parent_area {
+            h3 {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact_expertise_section {
+        padding-top: 40px;
+
+        .parent_area {
+            h3 {
+                font-size: 35px;
+            }
+
+            .slider_area {
+                padding-top: 60px;
+
+                .slide_inner {
+                    padding: 25px 20px;
+
+                    h3 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    a {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact_deliver_section {
+        padding-top: 40px;
+
+        .parent_area {
+            .upper_area {
+                flex-wrap: wrap;
+
+                h3 {
+                    font-size: 35px;
+                    width: 100%;
+                }
+
+                p {
+                    padding-top: 10px;
+                    width: 100%;
+                    font-size: 15px;
+                }
+            }
+
+            .cards_area {
+                gap: 40px;
+                padding-top: 30px;
+
+                .card_inner {
+                    width: calc((100% - 80px)/2);
+
+                    &:nth-child(even) {
+                        &::before {
+                            content: none;
+                        }
+                    }
+
+                    h4 {
+                        font-size: 16px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact_faq_section {
+        padding-top: 40px;
+
+        .parent_area {
+            h3 {
+                font-size: 35px;
+            }
+
+            .accordion_area {
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    .contact_expertise_section {
+        padding-top: 30px;
+        padding-bottom: 50px;
+
+        .parent_area {
+            h3 {
+                font-size: 28px;
+            }
+
+            .slider_area {
+                padding-top: 40px;
+
+                .slide_inner {
+                    padding: 25px 20px;
+                    border-radius: 10px;
+
+                    h3 {
+                        font-size: 16px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    a {
+                        margin-top: 20px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact_deliver_section {
+        padding-top: 40px;
+
+        .parent_area {
+            .upper_area {
+                flex-wrap: wrap;
+
+                h3 {
+                    font-size: 28px;
+                    width: 100%;
+                }
+
+                p {
+                    padding-top: 10px;
+                    width: 100%;
+                    font-size: 14px;
+                }
+            }
+
+            .cards_area {
+                gap: 40px;
+                padding-top: 30px;
+
+                .card_inner {
+                    width: calc((100% - 80px)/2);
+
+                    &:nth-child(even) {
+                        &::before {
+                            content: none;
+                        }
+                    }
+
+                    h4 {
+                        font-size: 16px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact_faq_section {
+        padding-top: 30px;
+
+        .parent_area {
+            h3 {
+                font-size: 28px;
+            }
+
+            .accordion_area {
+                padding-top: 5px;
+                padding-left: 0;
+                padding-right: 0;
+
+                .accordion {
+                    .accordion-item {
+                        .accordion-header {
+                            .accordion-button {
+                                padding: 16px 20px;
+                                font-size: 14px;
+                            }
+                        }
+
+                        .accordion-body {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+    .contact_expertise_section {
+        padding-top: 25px;
+        padding-bottom: 0;
+
+        .parent_area {
+            h3 {
+                font-size: 25px;
+            }
+
+            .slider_area {
+                padding-top: 20px;
+
+                .swiper-slide-active {
+                    transform: scale(1);
+                }
+
+                .slide_inner {
+                    padding: 25px 20px;
+                    border-radius: 10px;
+
+                    h3 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    a {
+                        margin-top: 20px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact_deliver_section {
+        padding-top: 25px;
+
+        .parent_area {
+            .upper_area {
+                flex-wrap: wrap;
+
+                h3 {
+                    font-size: 25px;
+                    width: 100%;
+                }
+
+                p {
+                    padding-top: 10px;
+                    width: 100%;
+                    font-size: 14px;
+                }
+            }
+
+            .cards_area {
+                gap: 20px;
+                padding-top: 30px;
+
+                .card_inner {
+                    width: 100%;
+
+                    &::before {
+                        display: none;
+                    }
+
+                    &:nth-child(even) {
+                        &::before {
+                            content: none;
+                            display: none;
+                        }
+                    }
+
+                    h4 {
+                        font-size: 16px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact_faq_section {
+        padding-top: 25px;
+
+        .parent_area {
+            h3 {
+                font-size: 25px;
+            }
+
+            .accordion_area {
+                padding-top: 5px;
+                padding-left: 0;
+                padding-right: 0;
+
+                .accordion {
+                    .accordion-item {
+                        .accordion-header {
+                            .accordion-button {
+                                padding: 16px 20px;
+                                font-size: 14px;
+                            }
+                        }
+
+                        .accordion-body {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .contact_expertise_section {
+        padding-bottom: 0;
+        padding-top: 25px;
+
+        .parent_area {
+            h3 {
+                font-size: 25px;
+            }
+
+            .slider_area {
+                padding-top: 20px;
+
+                .swiper-slide-active {
+                    transform: scale(1);
+                }
+
+                .slide_inner {
+                    padding: 25px 20px;
+                    border-radius: 10px;
+
+                    h3 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    a {
+                        margin-top: 20px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact_deliver_section {
+        padding-top: 25px;
+
+        .parent_area {
+            .upper_area {
+                flex-wrap: wrap;
+
+                h3 {
+                    font-size: 25px;
+                    width: 100%;
+                }
+
+                p {
+                    padding-top: 10px;
+                    width: 100%;
+                    font-size: 14px;
+                }
+            }
+
+            .cards_area {
+                gap: 20px;
+                padding-top: 30px;
+
+                .card_inner {
+                    width: 100%;
+
+                    &::before {
+                        display: none;
+                    }
+
+                    &:nth-child(even) {
+                        &::before {
+                            content: none;
+                            display: none;
+                        }
+                    }
+
+                    h4 {
+                        font-size: 16px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact_faq_section {
+        padding-top: 25px;
+
+        .parent_area {
+            h3 {
+                font-size: 25px;
+            }
+
+            .accordion_area {
+                padding-top: 5px;
+                padding-left: 0;
+                padding-right: 0;
+
+                .accordion {
+                    .accordion-item {
+                        .accordion-header {
+                            .accordion-button {
+                                padding: 16px 20px;
+                                font-size: 14px;
+                            }
+                        }
+
+                        .accordion-body {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}
+
+
+
+
+/* Add CSS styles for Portrait orientation */
+@media screen and (orientation: portrait) {}
+
+/* Add CSS styles for Landscape orientation */
+@media screen and (orientation: landscape) {}

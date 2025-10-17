@@ -1,0 +1,521 @@
+@use "../base/variable.scss";
+@use "../base/mixins.scss";
+
+
+
+.detail_info_section {
+    margin-top: 90px;
+    border-top: 1px solid variable.$border_color3;
+    border-bottom: 1px solid variable.$border_color3;
+
+    .parent_area {
+        @include mixins.clearfix();
+
+        .left_area {
+            width: 65%;
+            float: left;
+            border-right: 1px solid variable.$border_color3;
+
+            .intro_area {
+                padding-block: 60px;
+                padding-right: 40px;
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: variable.$white;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: variable.$txt_gray2;
+                    padding-top: 6px;
+                }
+            }
+
+            .main_content {
+                border-top: 1px solid variable.$border_color3;
+                padding: 60px 0;
+                padding-right: 40px;
+
+                h1,h2,h3,h4,h5,h6 {
+                    // font-size: 20px;
+                    font-weight: 500;
+                    color: variable.$white;
+                    padding-top: 40px;
+                    font-family: variable.$bricologe;
+
+                    &:first-of-type {
+                        padding-top: 0;
+                    }
+                }
+
+                span {
+                    font-family: variable.$bricologe !important;
+                }
+
+                p,div {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: variable.$txt_gray2;
+                    padding-top: 10px;
+                    font-family: variable.$bricologe;
+                }
+            }
+        }
+
+        .right_area {
+            float: right;
+            width: calc(100% - 65%);
+
+            .social_area {
+                display: flex;
+                align-items: center;
+                padding: 40px 0 40px 60px;
+                gap: 15px;
+                border-bottom: 1px solid variable.$border_color3;
+
+                .chip {
+                    min-width: 50px;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 7px;
+                    padding: 9px 14px;
+                    cursor: pointer;
+                    border: 1px solid variable.$border_color3;
+                    background-color: variable.$chip_bg;
+                    border-radius: 50px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 21px;
+                    color: variable.$text_opacity;
+
+                    &:first-child {
+                        span {
+                            color: variable.$red
+                        }
+                    }
+
+                    span {
+                        @include mixins.transition(all 0.3s ease);
+                    }
+
+                    &:hover {
+                        &:first-child {
+                            span {
+                                color: variable.$red
+                            }
+                        }
+
+                        span {
+                            color: variable.$primary_color;
+                        }
+                    }
+                }
+            }
+
+            .content {
+                padding: 60px;
+                padding-right: 0;
+
+                .published_area {
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        row-gap: 20px;
+
+                        li {
+                            flex-basis: 50%;
+                            flex-grow: 1;
+
+                            .top {
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 24px;
+                                color: variable.$txt_gray2;
+                                margin-bottom: 5px;
+                            }
+
+                            .bottom {
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 24px;
+                                color: variable.$white;
+                            }
+                        }
+                    }
+                }
+
+                .table_contents {
+                    padding-top: 40px;
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        color: variable.$txt_gray2;
+                        margin-bottom: 14px;
+                    }
+
+                    .listing {
+                        border-radius: 10px;
+                        padding: 18px 24px;
+                        background-color: variable.$chip_bg;
+
+                        li {
+                            list-style: disc;
+                            list-style-position: inside;
+                            margin-bottom: 16px;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            color: variable.$white;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* Above 1920 desktop */
+@media (min-width: 1920px) {}
+
+/* 1680 desktop */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* 1600 desktop */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Above 1400 and Below 1599 Desktop*/
+@media (min-width: 1400px) and (max-width: 1599px) {}
+
+/* 1300 desktop only */
+@media (min-width: 1300px) and (max-width: 1399px) {
+    .detail_info_section {
+        margin-top: 70px;
+    }
+}
+
+/* 1200 desktop only */
+@media (min-width: 1200px) and (max-width: 1299px) {
+    .detail_info_section {
+        margin-top: 60px;
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .detail_info_section {
+        margin-top: 50px;
+
+        .parent_area {
+            .left_area {
+                width: 55%;
+            }
+
+            .right_area {
+                width: 45%;
+            }
+        }
+    }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+    .detail_info_section {
+        margin-top: 40px;
+
+        .parent_area {
+            .left_area {
+                width: 100%;
+
+                .intro_area {
+                    padding: 30px 0;
+                }
+
+                .main_content {
+                    padding: 30px 0;
+                    border-bottom: 1px solid variable.$border_color3;
+                }
+            }
+
+            .right_area {
+                width: 100%;
+
+                .social_area {
+                    padding: 30px 0;
+                }
+
+                .content {
+                    padding: 30px 0;
+
+                    .table_contents {
+                        padding-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    .detail_info_section {
+        margin-top: 40px;
+
+        .parent_area {
+            .left_area {
+                width: 100%;
+
+                .intro_area {
+                    padding: 20px 0;
+                    h3 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+
+                .main_content {
+                    padding: 20px 0;
+                    border-bottom: 1px solid variable.$border_color3;
+
+                    h1,h2,h3,h4,h5,h6 {
+                        // font-size: 18px;
+                        padding-top: 20px;
+                    }
+
+                    p,div {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .right_area {
+                width: 100%;
+
+                .social_area {
+                    padding: 20px 0;
+                }
+
+                .content {
+                    padding: 20px 0;
+
+                    .published_area {
+                        ul {
+                            row-gap: 10px;
+                            li {
+                                .top {
+                                    font-size: 14px;
+                                }
+
+                                .bottom {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+
+                    .table_contents {
+                        padding-top: 20px;
+                        p{
+                            font-size: 14px;
+                        }
+                        .listing{
+                            li{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+    .detail_info_section {
+        margin-top: 30px;
+
+        .parent_area {
+            .left_area {
+                width: 100%;
+
+                .intro_area {
+                    padding: 20px 0;
+                    h3 {
+                        font-size: 16px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+
+                .main_content {
+                    padding: 20px 0;
+                    border-bottom: 1px solid variable.$border_color3;
+
+                    h1,h2,h3,h4,h5,h6 {
+                        // font-size: 16px;
+                        padding-top: 20px;
+                    }
+
+                    p,div {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .right_area {
+                width: 100%;
+
+                .social_area {
+                    padding: 20px 0;
+                    .chip{
+                        padding: 6px 14px;
+                    }
+                }
+
+                .content {
+                    padding: 20px 0;
+
+                    .published_area {
+                        ul {
+                            row-gap: 10px;
+                            li {
+                                .top {
+                                    font-size: 14px;
+                                }
+
+                                .bottom {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+
+                    .table_contents {
+                        padding-top: 20px;
+                        p{
+                            font-size: 14px;
+                        }
+                        .listing{
+                            li{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .detail_info_section {
+        margin-top: 25px;
+
+        .parent_area {
+            .left_area {
+                width: 100%;
+
+                .intro_area {
+                    padding: 20px 0;
+                    h3 {
+                        font-size: 16px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+
+                .main_content {
+                    padding: 20px 0;
+                    border-bottom: 1px solid variable.$border_color3;
+
+                    h1,h2,h3,h4,h5,h6 {
+                        // font-size: 16px;
+                        padding-top: 20px;
+                    }
+
+                    p,div {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .right_area {
+                width: 100%;
+
+                .social_area {
+                    padding: 20px 0;
+                    .chip{
+                        padding: 6px 14px;
+                    }
+                }
+
+                .content {
+                    padding: 20px 0;
+
+                    .published_area {
+                        ul {
+                            row-gap: 10px;
+                            li {
+                                .top {
+                                    font-size: 14px;
+                                }
+
+                                .bottom {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+
+                    .table_contents {
+                        padding-top: 20px;
+                        p{
+                            font-size: 14px;
+                        }
+                        .listing{
+                            li{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}
+
+
+
+
+/* Add CSS styles for Portrait orientation */
+@media screen and (orientation: portrait) {}
+
+/* Add CSS styles for Landscape orientation */
+@media screen and (orientation: landscape) {}

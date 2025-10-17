@@ -1,0 +1,600 @@
+@use "../base/variable.scss" as variable;
+@use "../base/mixins.scss" as mixins;
+
+.auth_page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        margin: auto;
+        width: 420px;
+        max-width: 100%;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+        padding: 30px;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            background-image: url('../../images/card_before.svg');
+            background-size: cover;
+            position: absolute;
+            width: 148px;
+            height: 148px;
+            top: -40px;
+            right: -40px;
+            z-index: -1;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            background-image: url('../../images/card_after.svg');
+            background-size: cover;
+            width: 243px;
+            height: 240px;
+            position: absolute;
+            bottom: -68px;
+            left: -46px;
+            z-index: -1;
+        }
+
+        .card-header {
+            background-color: variable.$white;
+            padding: 0;
+            border-bottom: none;
+
+            .heading {
+                font-size: 27px;
+                font-weight: 700;
+                color: variable.$grey;
+                text-align: center;
+            }
+        }
+
+        .card-body {
+            padding: 0;
+
+            h5 {
+                font-size: 20px;
+                font-weight: 600;
+                color: variable.$grey;
+                padding-top: 30px;
+            }
+
+            .desc {
+                font-size: 16px;
+                font-weight: 400;
+                color: variable.$grey;
+                line-height: 25px;
+                padding-top: 5px;
+            }
+
+            form {
+                padding-top: 30px;
+
+                .form-group {
+                    position: relative;
+
+                    .row2 {
+                        display: flex;
+                        justify-content: space-between;
+                        column-gap: 20px;
+
+                        .forgot {
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: variable.$primary_color;
+                            flex-shrink: 0;
+                        }
+                    }
+
+                    .input-group {
+                        .form-control {
+                            border: 1px solid variable.$border_color;
+                            padding: 10px 15px;
+                            padding-right: 0;
+
+                            &:focus {
+                                border-color: variable.$primary_color;
+                            }
+                        }
+
+                        .input-group-text {
+                            width: 43px;
+                            max-width: 100%;
+                            border: 1px solid variable.$border_color;
+                            border-top-right-radius: 7px;
+                            border-bottom-right-radius: 7px;
+                            font-size: 14px;
+                            color: variable.$inputColor;
+                            cursor: pointer;
+                        }
+
+                        &:focus-within .input-group-text {
+                            border-color: variable.$primary_color;
+                        }
+                    }
+                }
+
+                .form-check {
+                    .form-check-input {
+                        height: 20px;
+                        width: 20px;
+                        border: 1px solid variable.$border_color;
+
+                        &:focus {
+                            border: 1px solid variable.$primary_color;
+                        }
+
+                        &:checked {
+                            background-color: variable.$primary_color;
+                        }
+                    }
+                }
+
+                .btn_area {
+                    padding-top: 30px;
+                    margin-bottom: 15px;
+
+                    .back {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: variable.$primary_color;
+                        padding-top: 20px;
+                        display: block;
+                        text-align: center;
+                        @include mixins.transition(all 0.5s ease-in-out);
+
+                        .back_arrow {
+                            font-size: 13px;
+                            color: variable.$primary_color;
+                            padding-right: 4px;
+                            @include mixins.transition(all 0.5s ease-in-out);
+                        }
+
+                        &:hover {
+                            color: variable.$grey;
+
+                            .back_arrow {
+                                color: variable.$grey;
+                            }
+                        }
+                    }
+
+                    .btn {
+                        &.btn-primary {
+                            width: 100%;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/** Above 1920 desktop */
+@media (min-width: 1920px) {}
+
+/* 1680 desktop */
+@media (min-width: 1680px) and (max-width: 1919px) {}
+
+/* 1600 desktop */
+@media (min-width: 1600px) and (max-width: 1679px) {}
+
+/* Above 1400 and Below 1599 Desktop*/
+@media (min-width: 1400px) and (max-width: 1599px) {}
+
+/* 1300 desktop only */
+@media (min-width: 1300px) and (max-width: 1399px) {}
+
+/* 1200 desktop only */
+@media (min-width: 1200px) and (max-width: 1299px) {}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .auth_page {
+
+        .card {
+            width: 370px;
+            padding: 20px 25px;
+
+            .card-header {
+                .heading {
+                    font-size: 24px;
+                }
+            }
+
+            .card-body {
+                h5 {
+                    font-size: 18px;
+                    padding-top: 20px;
+                }
+
+                .desc {
+                    font-size: 15px;
+                    line-height: 22px;
+                }
+
+                form {
+                    padding-top: 20px;
+
+                    .form-group {
+
+                        .row2 {
+                            .forgot {
+                                font-size: 13px;
+                            }
+                        }
+
+                        .input-group {
+                            .form-control {
+                                padding: 7px 10px;
+                                padding-right: 0;
+                            }
+
+                            .input-group-text {
+                                width: 40px;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+                    .form-check {
+                        .form-check-input {
+                            height: 18px;
+                            width: 18px;
+                        }
+                    }
+
+                    .btn_area {
+                        padding-top: 20px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape tablets and ipad */
+@media (min-width: 768px) and (max-width: 991px) {
+    .auth_page {
+
+        .card {
+            width: 370px;
+            padding: 20px 25px;
+
+            .card-header {
+                .heading {
+                    font-size: 24px;
+                }
+            }
+
+            .card-body {
+                h5 {
+                    font-size: 18px;
+                    padding-top: 20px;
+                }
+
+                .desc {
+                    font-size: 15px;
+                    line-height: 22px;
+                }
+
+                form {
+                    padding-top: 20px;
+
+                    .form-group {
+
+                        .row2 {
+                            .forgot {
+                                font-size: 13px;
+                            }
+                        }
+
+                        .input-group {
+                            .form-control {
+                                padding: 7px 10px;
+                                padding-right: 0;
+                            }
+
+                            .input-group-text {
+                                width: 40px;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+                    .form-check {
+                        .form-check-input {
+                            height: 18px;
+                            width: 18px;
+                        }
+                    }
+
+                    .btn_area {
+                        padding-top: 20px;
+                        margin-bottom: 10px;
+
+                        .back {
+                            font-size: 15px;
+                            padding-top: 18px;
+
+                            .back_arrow {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 576px) and (max-width: 767px) {
+    .auth_page {
+
+        .card {
+            width: 370px;
+            padding: 20px;
+            margin-top: 40px;
+
+            &::before {
+                height: 120px;
+                width: 120px;
+            }
+
+            &:after {
+                height: 190px;
+                width: 190px;
+            }
+
+            .card-header {
+                .heading {
+                    font-size: 24px;
+                }
+            }
+
+            .card-body {
+                h5 {
+                    font-size: 18px;
+                    padding-top: 20px;
+                }
+
+                .desc {
+                    font-size: 15px;
+                    line-height: 22px;
+                }
+
+                form {
+                    padding-top: 20px;
+
+                    .form-group {
+
+                        .row2 {
+                            .forgot {
+                                font-size: 13px;
+                            }
+                        }
+
+                        .input-group {
+                            .form-control {
+                                padding: 7px 10px;
+                                padding-right: 0;
+                            }
+
+                            .input-group-text {
+                                width: 40px;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+                    .form-check {
+                        .form-check-input {
+                            height: 18px;
+                            width: 18px;
+                        }
+                    }
+
+                    .btn_area {
+                        padding-top: 20px;
+                        margin-bottom: 10px;
+
+                        .back {
+                            font-size: 15px;
+                            padding-top: 18px;
+
+                            .back_arrow {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (min-width: 361px) and (max-width: 575px) {
+    .auth_page {
+        .card {
+            width: 340px;
+            padding: 20px;
+
+            &::before {
+                display: none;
+            }
+
+            &:after {
+                display: none;
+            }
+
+            .card-header {
+                .heading {
+                    font-size: 20px;
+                }
+            }
+
+            .card-body {
+                h5 {
+                    font-size: 16px;
+                    padding-top: 20px;
+                }
+
+                .desc {
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+
+                form {
+                    padding-top: 20px;
+
+                    .form-group {
+
+                        .row2 {
+                            .forgot {
+                                font-size: 13px;
+                            }
+                        }
+
+                        .input-group {
+                            .form-control {
+                                padding: 7px 10px;
+                                padding-right: 0;
+                            }
+
+                            .input-group-text {
+                                width: 40px;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+                    .form-check {
+                        .form-check-input {
+                            height: 16px;
+                            width: 16px;
+                        }
+                    }
+
+                    .btn_area {
+                        padding-top: 20px;
+                        margin-bottom: 10px;
+
+                        .back {
+                            font-size: 14px;
+                            padding-top: 15px;
+
+                            .back_arrow {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 360px) {
+    .auth_page {
+        .card {
+            width: 340px;
+            padding: 20px;
+
+            &::before {
+                display: none;
+            }
+
+            &:after {
+                display: none;
+            }
+
+            .card-header {
+                .heading {
+                    font-size: 20px;
+                }
+            }
+
+            .card-body {
+                h5 {
+                    font-size: 16px;
+                    padding-top: 20px;
+                }
+
+                .desc {
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+
+                form {
+                    padding-top: 20px;
+
+                    .form-group {
+
+                        .row2 {
+                            .forgot {
+                                font-size: 13px;
+                            }
+                        }
+
+                        .input-group {
+                            .form-control {
+                                padding: 7px 10px;
+                                padding-right: 0;
+                            }
+
+                            .input-group-text {
+                                width: 40px;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+                    .form-check {
+                        .form-check-input {
+                            height: 16px;
+                            width: 16px;
+                        }
+                    }
+
+                    .btn_area {
+                        padding-top: 20px;
+                        margin-bottom: 10px;
+
+                        .back {
+                            font-size: 14px;
+                            padding-top: 15px;
+
+                            .back_arrow {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 320px) {}
+
+
+
+
+/* Add CSS styles for Portrait orientation */
+@media screen and (orientation: portrait) {}
+
+/* Add CSS styles for Landscape orientation */
+@media screen and (orientation: landscape) {}
