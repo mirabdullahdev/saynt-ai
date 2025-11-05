@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
+
+// Provide a safe BASE_URL fallback
+const BASE_URL = process.env.BASE_URL || 'http://localhost';
+
 const nextConfig = {
   experimental: {
     appDir: true,
   },
   env: {
-    BASE_URL: process.env.BASE_URL || 'http://localhost',
+    BASE_URL,
     MONGO_URI: process.env.MONGO_URI || '',
     SALT_ROUNDS: process.env.SALT_ROUNDS || '10',
     SALT_SECRET: process.env.SALT_SECRET || '',
@@ -16,11 +20,14 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: process.env.BASE_URL && process.env.BASE_URL.startsWith('https') ? 'https' : 'http',
-        hostname: process.env.BASE_URL ? (() => { 
-          try { return new URL(process.env.BASE_URL).hostname } 
-          catch { return 'localhost'; } 
-        })() : 'localhost',
+        protocol: BASE_URL.startsWith('https') ? 'https' : 'http',
+        hostname: (() => {
+          try {
+            return new URL(BASE_URL).hostname;
+          } catch {
+            return 'localhost';
+          }
+        })(),
         pathname: '/uploads/**',
       },
       {
