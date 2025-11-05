@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true, // ✅ enables /src/app support
+    appDir: true, // enables /src/app support
   },
+  srcDir: 'src', // ✅ tell Next.js to look inside /src
   env: {
     BASE_URL: process.env.BASE_URL,
     MONGO_URI: process.env.MONGO_URI,
