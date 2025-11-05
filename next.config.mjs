@@ -16,7 +16,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: (process.env.BASE_URL || 'http://localhost').startsWith('https') ? 'https' : 'http',
+        protocol: process.env.BASE_URL?.startsWith('https') ? 'https' : 'http',
         hostname: process.env.BASE_URL ? new URL(process.env.BASE_URL).hostname : 'localhost',
         pathname: '/uploads/**',
       },
