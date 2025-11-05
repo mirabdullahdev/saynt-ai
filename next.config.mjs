@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true, // enables /src/app support
+    appDir: true,
   },
   env: {
     BASE_URL: process.env.BASE_URL || 'http://localhost',
@@ -16,8 +16,11 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: process.env.BASE_URL?.startsWith('https') ? 'https' : 'http',
-        hostname: process.env.BASE_URL ? new URL(process.env.BASE_URL).hostname : 'localhost',
+        protocol: process.env.BASE_URL && process.env.BASE_URL.startsWith('https') ? 'https' : 'http',
+        hostname: process.env.BASE_URL ? (() => { 
+          try { return new URL(process.env.BASE_URL).hostname } 
+          catch { return 'localhost'; } 
+        })() : 'localhost',
         pathname: '/uploads/**',
       },
       {
